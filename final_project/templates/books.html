@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:700,600' rel='stylesheet' type='text/css'>
+<link href="static/theme.css" rel="stylesheet" type="text/css" media="all">
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book</title>
+</head>
+
+<body>
+<table>
+  <tr>
+    <td>
+      {% for table in tables %}
+        <h2>{{titles[loop.index]}}</h2>
+            {{ table|safe }}
+      {% endfor %}
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <form method="post" action="/books">
+        <label for="site-search">Search for ISBN:</label>
+        <input type="search" id="site-search" name="isbn">
+        <button>Search</button>
+      </form>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <form method="post" action="/delete_book">
+        <label for="book_id">Book to Delete by id:</label>
+      <input type="text" id="book_id" name="book_id">
+      <button>Delete</button>
+    </td>
+  </tr>
+</table>
+  {{ error }}
+<br>
+</body>
+</html>

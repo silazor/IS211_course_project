@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:700,600' rel='stylesheet' type='text/css'>
+<link href="static/theme.css" rel="stylesheet" type="text/css" media="all">
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Results</title>
+</head>
+<body>
+
+{{ error }}
+<form method="post" action="/add_book">
+<table border="1">
+  <tr>
+    <td>
+      Author
+    </td>
+    <td>
+      Title
+    </td>
+    <td>
+      Page Count
+    </td>
+    <td>
+      Average Rating
+    </td>
+    <td>
+      Add Book?
+    </td>
+  </tr>
+  <tr>
+    <td>
+     <input type="text" name="author" value="{{ book_info.author }}" />
+    </td>
+    <td>
+     <input type="text" name="title" value="{{ book_info.title }}" />
+    </td>
+    <td>
+     <input type="text" name="page_count" value="{{ book_info.page_count }}" />
+    </td>
+    <td>
+     <input type="text" name="avg_rating" value="{{ book_info.avg_rating }}" />
+    </td>
+    <td>
+      <button name="mysubmitbutton" id="mysubmitbutton" type="submit" class="btn"> Add Book </button>
+    </td>
+  </tr>
+</table>
+</form>
+</body>
+</html>
