@@ -1,4 +1,5 @@
-To run:
+### To run:
+
 Change line 23 in app.py to wherever you checked the code out.
 Make sure pandas and sqlite3 modules are installed as well.
 
