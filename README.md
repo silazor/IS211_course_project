@@ -14,4 +14,4 @@ The user, the book title, and the book author in order to avoid duplicates.
 
 Where practical exceptions are caught and logic/usage errors are returned to the user.
 
-Some css files are used to styling, however styling is not my strongest skill.
+Some css files are used to styling, however styling is not my strongest skill and they are not my css files :-)
